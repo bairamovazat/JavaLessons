@@ -1,13 +1,12 @@
-package ru.azat.generic;
+package ru.azat.calculator;
+
+
+import ru.azat.calculator.model.DoubleCalculatorNumber;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
-import ru.azat.calculator.Calculator;
-import ru.azat.calculator.AbstractCalculator;
-import ru.azat.calculator.DoubleCalculator;
-import ru.azat.calculator.model.DoubleCalculatorNumber;
 
 /**
  * Mockito.mock, verify, when и argumentCaptor

@@ -10,7 +10,9 @@ public class JavaScriptExecute {
         ScriptEngine engine = manager.getEngineByName("JavaScript");
 
         engine.eval("function f() { return 1; };" +
-                "var a = 3;");
+                "var a = 3;" +
+                "print(f());" +
+                "print(a)");
     }
 
     public static void main(String[] args) throws ScriptException {

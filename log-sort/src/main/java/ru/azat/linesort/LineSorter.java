@@ -3,16 +3,11 @@ package ru.azat.linesort;
 import org.apache.commons.io.IOUtils;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class LineSorter {
     public File file;
-
-    public String fileData;
-
-    private static Integer minLogCount = 500;
 
     public LineSorter(String fileLocation) {
         file = new File(fileLocation);

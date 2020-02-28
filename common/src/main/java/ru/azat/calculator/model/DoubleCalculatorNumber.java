@@ -1,7 +1,5 @@
 package ru.azat.calculator.model;
 
-import ru.azat.calculator.DoubleCalculator;
-
 public class DoubleCalculatorNumber extends AbstractCalculatorNumber<Double> {
 
     private Double value;
