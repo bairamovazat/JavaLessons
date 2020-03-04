@@ -8,7 +8,7 @@ public class TraceIdPool {
     private TraceIdPool() {
     }
 
-    public String getOrCreateCurrentThreadTraceId() {
+    public String getOrCreateThreadTraceId() {
         if (this.treadTraceId.get() == null) {
             this.treadTraceId.set(generateThreadTraceId());
         }
@@ -17,6 +17,12 @@ public class TraceIdPool {
 
     private String generateThreadTraceId() {
         return UUID.randomUUID().toString();
+    }
+
+    private void resetThreadTraceId() {
+        if (this.treadTraceId.get() != null) {
+            this.treadTraceId.remove();
+        }
     }
 
     private static TraceIdPool traceIdPool = null;
@@ -30,6 +36,11 @@ public class TraceIdPool {
 
     public static String getCurrentThreadTraceId() {
         TraceIdPool traceIdPool = getInstance();
-        return traceIdPool.getOrCreateCurrentThreadTraceId();
+        return traceIdPool.getOrCreateThreadTraceId();
+    }
+
+    public static void resetCurrentThreadTraceId() {
+        TraceIdPool traceIdPool = getInstance();
+        traceIdPool.resetThreadTraceId();
     }
 }
