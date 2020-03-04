@@ -24,6 +24,7 @@
         <module>log-sort</module>
         <module>common</module>
         <module>echo-server</module>
+        <module>aspect-example</module>
     </modules>
 
     <dependencies>
